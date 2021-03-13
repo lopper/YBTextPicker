@@ -27,8 +27,6 @@
 		9B9B587425FCA373002254A2 /* YBTextPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B586C25FCA373002254A2 /* YBTextPickerCell.xib */; };
 		9B9B587525FCA373002254A2 /* YBTextPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9B586D25FCA373002254A2 /* YBTextPickerCell.swift */; };
 		9B9B587625FCA373002254A2 /* YBTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9B586E25FCA373002254A2 /* YBTextPicker.swift */; };
-		9B9B587725FCA373002254A2 /* YBTextPicker_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B587025FCA373002254A2 /* YBTextPicker_checked.png */; };
-		9B9B587825FCA373002254A2 /* YBTextPicker_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B587125FCA373002254A2 /* YBTextPicker_unchecked.png */; };
 		9B9B587925FCA373002254A2 /* YBTextPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B587225FCA373002254A2 /* YBTextPicker.xib */; };
 /* End PBXBuildFile section */
 
@@ -56,9 +54,8 @@
 		9B9B586C25FCA373002254A2 /* YBTextPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBTextPickerCell.xib; sourceTree = "<group>"; };
 		9B9B586D25FCA373002254A2 /* YBTextPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBTextPickerCell.swift; sourceTree = "<group>"; };
 		9B9B586E25FCA373002254A2 /* YBTextPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBTextPicker.swift; sourceTree = "<group>"; };
-		9B9B587025FCA373002254A2 /* YBTextPicker_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YBTextPicker_checked.png; sourceTree = "<group>"; };
-		9B9B587125FCA373002254A2 /* YBTextPicker_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YBTextPicker_unchecked.png; sourceTree = "<group>"; };
 		9B9B587225FCA373002254A2 /* YBTextPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBTextPicker.xib; sourceTree = "<group>"; };
+		9B9B5DB025FCBD7F002254A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Sources/Assets/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +151,7 @@
 		9B9B586F25FCA373002254A2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				9B9B587025FCA373002254A2 /* YBTextPicker_checked.png */,
-				9B9B587125FCA373002254A2 /* YBTextPicker_unchecked.png */,
+				9B9B5DB025FCBD7F002254A2 /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -232,10 +228,8 @@
 				9B9B584625FCA1B4002254A2 /* YBTextPicker4.gif in Resources */,
 				9B9B584B25FCA1B4002254A2 /* red_ic_unchecked.png in Resources */,
 				9B9B585025FCA1B4002254A2 /* LaunchScreen.storyboard in Resources */,
-				9B9B587825FCA373002254A2 /* YBTextPicker_unchecked.png in Resources */,
 				9B9B584D25FCA1B4002254A2 /* YBTextPicker_Logo.png in Resources */,
 				9B9B584A25FCA1B4002254A2 /* blue_ic_checked.png in Resources */,
-				9B9B587725FCA373002254A2 /* YBTextPicker_checked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
