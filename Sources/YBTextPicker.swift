@@ -367,7 +367,7 @@ extension YBTextPicker : UITableViewDataSource, UITableViewDelegate{
         return arrValues.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if allowMultipleSelection == false {
             selectedValues = [YBTextPickerDataModel]()
         }
