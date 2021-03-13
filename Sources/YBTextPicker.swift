@@ -285,7 +285,7 @@ public class YBTextPicker: UIViewController {
 
 extension YBTextPicker : UISearchBarDelegate{
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count == 0{
             arrValues = arrAllValues.map{ $0 }
         }else{
