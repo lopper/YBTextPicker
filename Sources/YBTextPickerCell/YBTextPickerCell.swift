@@ -23,6 +23,9 @@ class YBTextPickerCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
+        guard isSelected != selected else {
+                return
+            }
         super.setSelected(selected, animated: animated)
     }
     
