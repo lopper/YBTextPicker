@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = 'YBTextPicker'
-    s.version = '1.0.1'
+    s.version = '1.0.2'
     s.license = { :type => "MIT", :file => "LICENSE.MD" }
  
     s.summary = 'Yet another text picker / selector written in swift 4.2.'
