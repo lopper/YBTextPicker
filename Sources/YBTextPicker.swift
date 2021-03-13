@@ -8,18 +8,39 @@
 
 import UIKit
 
-enum YBTextPickerAnimation:String{
+public enum YBTextPickerAnimation:String{
     case FromBottom
     case Fade
 }
 
-enum YBTextPickerCheckMarkPosition:String{
+public enum YBTextPickerCheckMarkPosition:String{
     case Left
     case Right
 }
 
-struct YBTextPickerAppearanceManager{
+public struct YBTextPickerAppearanceManager {
     
+ 
+    public  init(pickerTitle: String? = nil, titleFont: UIFont? = nil, titleTextColor: UIColor? = nil, titleBackground: UIColor? = nil, searchBarFont: UIFont? = nil, searchBarPlaceholder: String? = nil, closeButtonTitle: String? = nil, closeButtonColor: UIColor? = nil, closeButtonFont: UIFont? = nil, doneButtonTitle: String? = nil, doneButtonColor: UIColor? = nil, doneButtonFont: UIFont? = nil, checkMarkPosition: YBTextPickerCheckMarkPosition? = nil, itemCheckedImage: UIImage? = nil, itemUncheckedImage: UIImage? = nil, itemColor: UIColor? = nil, itemFont: UIFont? = nil) {
+        self.pickerTitle = pickerTitle
+        self.titleFont = titleFont
+        self.titleTextColor = titleTextColor
+        self.titleBackground = titleBackground
+        self.searchBarFont = searchBarFont
+        self.searchBarPlaceholder = searchBarPlaceholder
+        self.closeButtonTitle = closeButtonTitle
+        self.closeButtonColor = closeButtonColor
+        self.closeButtonFont = closeButtonFont
+        self.doneButtonTitle = doneButtonTitle
+        self.doneButtonColor = doneButtonColor
+        self.doneButtonFont = doneButtonFont
+        self.checkMarkPosition = checkMarkPosition
+        self.itemCheckedImage = itemCheckedImage
+        self.itemUncheckedImage = itemUncheckedImage
+        self.itemColor = itemColor
+        self.itemFont = itemFont
+    }
+
     var pickerTitle : String?
     var titleFont : UIFont?
     var titleTextColor : UIColor?
@@ -44,7 +65,7 @@ struct YBTextPickerAppearanceManager{
     
 }
 
-class YBTextPicker: UIViewController {
+@objc class YBTextPicker: UIViewController {
 
     //MARK:- Constants
     let animationDuration = 0.3

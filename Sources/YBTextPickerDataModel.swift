@@ -8,7 +8,7 @@
 
 import Foundation
 
-class YBTextPickerDataModel : NSObject{
+@objc class YBTextPickerDataModel : NSObject{
     
     var title : String!
     var identity : Int!
