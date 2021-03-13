@@ -111,7 +111,9 @@ public class YBTextPicker: UIViewController {
         onCancel : @escaping () -> Void
         ){
         
-        super.init(nibName: "YBTextPicker", bundle: nil)
+        let bundle = Bundle(for: YBTextPicker.self)
+        
+        super.init(nibName: "YBTextPicker", bundle: bundle)
         
         for (index,textItem) in items.enumerated(){
             let dataModel = YBTextPickerDataModel.init(textItem, index)
@@ -162,7 +164,9 @@ public class YBTextPicker: UIViewController {
     }
     
     func setupLayout(){
-        tableView.register(UINib.init(nibName: "YBTextPickerCell", bundle: nil), forCellReuseIdentifier: "YBTextPickerCell")
+        
+        let bundle = Bundle(for: YBTextPicker.self)
+        tableView.register(UINib.init(nibName: "YBTextPickerCell", bundle: bundle), forCellReuseIdentifier: "YBTextPickerCell")
         
         if animation == .Fade{
             containerView.alpha = 0
