@@ -8,12 +8,12 @@
 
 import Foundation
 
-@objc class YBTextPickerDataModel : NSObject{
+public class YBTextPickerDataModel : NSObject{
     
-    var title : String!
-    var identity : Int!
+    public var title : String!
+    public var identity : Int!
     
-    init(_ title:String, _ identity:Int) {
+    public init(_ title:String, _ identity:Int) {
         super.init()
         self.title = title
         self.identity = identity

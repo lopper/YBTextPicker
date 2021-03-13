@@ -65,7 +65,7 @@ public struct YBTextPickerAppearanceManager {
     
 }
 
-@objc class YBTextPicker: UIViewController {
+public class YBTextPicker: UIViewController {
 
     //MARK:- Constants
     let animationDuration = 0.3
@@ -92,19 +92,19 @@ public struct YBTextPickerAppearanceManager {
     var arrAllValues = [YBTextPickerDataModel]()
     var arrValues = [YBTextPickerDataModel]()
     
-    var selectedValues = [YBTextPickerDataModel]()
+    public var selectedValues = [YBTextPickerDataModel]()
     
-    var preSelectedValues = [String]()
+    public var preSelectedValues = [String]()
     
-    var allowMultipleSelection = false
-    var tapToDismiss = true
+    public var allowMultipleSelection = false
+    public var tapToDismiss = true
     var animation = YBTextPickerAnimation.FromBottom
     var appearanceManager : YBTextPickerAppearanceManager?
     
     var completionHandler : ((_ selectedIndexes:[Int], _ selectedValues:[String])->Void)?
     var cancelHandler : (()->Void)?
     
-    init (
+    public init (
         with items : [String],
         appearance : YBTextPickerAppearanceManager?,
         onCompletion : @escaping (_ selectedIndexes:[Int], _ selectedValues:[String]) -> Void,
@@ -132,7 +132,7 @@ public struct YBTextPickerAppearanceManager {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func show(withAnimation animationType:YBTextPickerAnimation){
+    public func show(withAnimation animationType:YBTextPickerAnimation){
         self.animation = animationType
         if let topController = UIApplication.topViewController() {
             var shouldAnimate = false
@@ -143,13 +143,13 @@ public struct YBTextPickerAppearanceManager {
         }
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         setupLayout()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animate(withDuration: animationDuration, animations: {
             self.shadowView.backgroundColor = self.shadowColor.withAlphaComponent(self.shadowAmount)
@@ -302,7 +302,7 @@ extension YBTextPicker : UISearchBarDelegate{
 
 extension YBTextPicker : UITableViewDataSource, UITableViewDelegate{
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "YBTextPickerCell", for: indexPath) as! YBTextPickerCell
         
         let dataModel = arrValues[indexPath.row]
@@ -359,7 +359,7 @@ extension YBTextPicker : UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrValues.count
     }
     
