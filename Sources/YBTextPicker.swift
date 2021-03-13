@@ -316,11 +316,13 @@ extension YBTextPicker : UITableViewDataSource, UITableViewDelegate{
         
         var chkImage:UIImage? = nil
         
+        let bundle = Bundle(for: YBTextPicker.self)
+        
         if selectedValues.contains(dataModel)
         {
-            chkImage = #imageLiteral(resourceName: "YBTextPicker_checked.png")
+            chkImage = UIImage(named: "YBTextPicker_checked", in: bundle, compatibleWith: nil)
         }else{
-            chkImage = #imageLiteral(resourceName: "YBTextPicker_unchecked.png")
+            chkImage = UIImage(named: "YBTextPicker_unchecked", in: bundle, compatibleWith: nil)
         }
         
         cell.widthOfImgTrailingCheck.constant = 0.0
